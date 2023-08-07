@@ -1,4 +1,4 @@
-const kit = [["/src/assets/T40.webp","Agras T40 + Radio Control", "T40", "$63.496.000"], ["/src/assets/T20P.png","Agras T20P + Radio Control", "T40", "$51.412.000"], ["/src/assets/mavic3M.webp","DJI Mavic 3 Multiespectral", "Mavic 3M", "$23.792.000"], ["/src/assets/batteryKIT.png","Kit de baterías", "Mavic 3M", "$2.900.000"], ["/src/assets/T40_BATTERY.webp","Batería", "T40", "$27.588.000"], ["/src/assets/T30-Battery.png","Batería", "T30", "$7.196.000"], ["/src/assets/T20P_BATTERY.webp","Batería para Agras T20P", "T20P", "$19.800.000"], ["./src/assets/t30Charger.webp", "Cargador de baterías", "T20P, T30, T40", "$5.196.000"],["/src/assets/DJI_D12000iE.webp","Generador DJI D12000iE", "T10, T20(P), T30, T40", "$15.996.000"],["./src/assets/t40_tank.webp", "Tanque de sólidos", "T40", "$5.888.000"], ["./src/assets/t30_tank.webp", "Tanque de sólidos", "T30", "Sin definir"],["/src/assets/T20P_tank.png","Tanque de sólidos T20P", "T20P", "$5.272.000"], ["./src/assets/AC_cable.png", "Cable AC 2600W", "T10, T20(P), T30, T40", "144.000"], ["./src/assets/WB37Battery.webp", "Batería externa WB37", "T10, T20(P), T30, T40", "$364.000"], ["/src/assets/DJI65W.png","Cargador externo de 65W", "T10, T20(P), T30, T40", "$364.000"], ["/src/assets/RTKantenna.webp","RTK estación móvil", "T10, T20(P), T30, T40", "$14.708.000"], ["/src/assets/RTKbase.png","RTK trípode", "RTK estación movil", "$1.952.000"], ["/src/assets/licencia.png","Curso de piloto de drone", "Complemento", "$1.500.000"], ["/src/assets/herramientas.png","Curso de mantenimiento", "Complemento", "$4.500.000"], ["/src/assets/mantenimiento.png","Mantenimiento preventivo", "Complemento", "$800.000"]]
+const kit = [["./src/assets/T40.webp","Agras T40 + Radio Control", "T40", "$63.496.000"], ["./src/assets/T20P.png","Agras T20P + Radio Control", "T40", "$51.412.000"], ["/src/assets/mavic3M.webp","DJI Mavic 3 Multiespectral", "Mavic 3M", "$23.792.000"], ["./src/assets/batteryKIT.png","Kit de baterías", "Mavic 3M", "$2.900.000"], ["./src/assets/T40_BATTERY.webp","Batería", "T40", "$27.588.000"], ["./src/assets/T30-Battery.png","Batería", "T30", "$7.196.000"], ["./src/assets/T20P_BATTERY.webp","Batería para Agras T20P", "T20P", "$19.800.000"], ["./src/assets/t30Charger.webp", "Cargador de baterías", "T20P, T30, T40", "$5.196.000"],["./src/assets/DJI_D12000iE.webp","Generador DJI D12000iE", "T10, T20(P), T30, T40", "$15.996.000"],["./src/assets/t40_tank.webp", "Tanque de sólidos", "T40", "$5.888.000"], ["./src/assets/t30_tank.webp", "Tanque de sólidos", "T30", "Sin definir"],["./src/assets/T20P_tank.png","Tanque de sólidos T20P", "T20P", "$5.272.000"], ["./src/assets/AC_cable.png", "Cable AC 2600W", "T10, T20(P), T30, T40", "144.000"], ["./src/assets/WB37Battery.webp", "Batería externa WB37", "T10, T20(P), T30, T40", "$364.000"], ["./src/assets/DJI65W.png","Cargador externo de 65W", "T10, T20(P), T30, T40", "$364.000"], ["./src/assets/RTKantenna.webp","RTK estación móvil", "T10, T20(P), T30, T40", "$14.708.000"], ["./src/assets/RTKbase.png","RTK trípode", "RTK estación movil", "$1.952.000"], ["./src/assets/licencia.png","Curso de piloto de drone", "Complemento", "$1.500.000"], ["./src/assets/herramientas.png","Curso de mantenimiento", "Complemento", "$4.500.000"], ["./src/assets/mantenimiento.png","Mantenimiento preventivo", "Complemento", "$800.000"]]
 
 const home = document.querySelector(".home")
 
@@ -53,10 +53,16 @@ function goToDrones(){
     
 }
 
-const kitsRowReturn = document.querySelector(".kits--return__row")
-kitsRowReturn.addEventListener("click", kitsReturn)
+const logo = document.querySelector(".logo")
+logo.addEventListener("click", logoReturn)
 
-function kitsReturn(){
+function logoReturn(){
+    if(!home.classList.contains("inactive")){
+        return;
+    }
+    if(!filtersContainer.classList.contains("inactive")){
+        filterShowHide()
+    }
     const arrCards = cardsContainer.querySelectorAll('div');
     arrCards.forEach(el => el.remove())
     home.classList.toggle("inactive")
@@ -65,4 +71,16 @@ function kitsReturn(){
 
 function goToSpare(){
     home.classList.toggle("inactive")
+}
+
+const filterDiv = document.querySelector(".filters--title");
+const arowUp = document.querySelector(".arow_up")
+const arowDown = document.querySelector(".arow_down")
+const filtersContainer = document.querySelector(".filters--container");
+filterDiv.addEventListener("click", filterShowHide)
+
+function filterShowHide(){
+    filtersContainer.classList.toggle("inactive")
+    arowUp.classList.toggle("inactive")
+    arowDown.classList.toggle("inactive")
 }
