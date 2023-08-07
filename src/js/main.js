@@ -26,18 +26,22 @@ function goToDrones(filtro){
                 el.classList.toggle("active")
             }
         })
+        clearCanvasKits()
         kit.forEach(el => {    
             drawCard(el);    
         });
     } else {
-        const arrCards = cardsContainer.querySelectorAll('div');
-        arrCards.forEach(el => el.remove())
+        clearCanvasKits()
         kit.forEach(el => {  
             if(el[3]===filtro) drawCard(el);    
         });
         filtroAnt = filtro;
     }
 
+}
+function clearCanvasKits(){
+    const arrCards = cardsContainer.querySelectorAll('div');
+    arrCards.forEach(el => el.remove())
 }
 function drawCard(item){
     const img = document.createElement('img');
@@ -84,8 +88,7 @@ function logoReturn(){
     if(!filtersContainer.classList.contains("inactive")){
         filterShowHide()
     }
-    const arrCards = cardsContainer.querySelectorAll('div');
-    arrCards.forEach(el => el.remove())
+    clearCanvasKits()
     home.classList.toggle("inactive")
     kits.classList.toggle("inactive")
 
