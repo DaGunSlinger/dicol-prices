@@ -172,7 +172,7 @@ nav .logo img {
   border: none;
 }
 .filters--container__button:hover {
-  background-color: #11974d;
+  background-color: #5a5e5e;
   color: #f7f7f7;
 }
 .filters--container__button img {
@@ -248,6 +248,10 @@ nav .logo img {
   display: none;
 }
 
+.active {
+  background-color: #11974d;
+}
+
 @media (min-width: 481px) {
   .kits {
     padding: 1rem;
@@ -298,5 +302,15 @@ nav .logo img {
   }
   .filters--container {
     padding: 0;
+  }
+  .kits .cards--container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
