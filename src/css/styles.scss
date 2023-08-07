@@ -67,59 +67,62 @@ nav{
     }
 }
 
-.filters{
+.filterBar{
     width: 100%;
     height: auto;
     padding-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &--title{
-        width: 25rem;
+    .filters{
+        width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 1rem 0 1rem 0;
-        img{
-            width: 2rem;
-            height: 2rem;
-            margin-right: 1rem;
-        }
-        h2{
-            margin-right: 1rem;
-        }
-        .arow_down{
-            transform: rotate(90deg);
-        }
-        .arow_up{
-            transform: rotate(270deg);
-        }
-    }
-    &--container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        &__button{
-            height: 4rem;
-            width: 15rem;
-    
+        &--title{
+            width: 25rem;
             display: flex;
+            justify-content: center;
             align-items: center;
-            margin: 0 1rem 1rem 1rem;
-            border-radius: 1rem;
-    
-            border: none;
-
-            &:hover{
-                background-color: $color-gray;
-                color: $color-light;
-            }
+            margin: 1rem 0 1rem 0;
             img{
-                margin: 1rem;
                 width: 2rem;
                 height: 2rem;
+                margin-right: 1rem;
+            }
+            h2{
+                margin-right: 1rem;
+            }
+            .arow_down{
+                transform: rotate(90deg);
+            }
+            .arow_up{
+                transform: rotate(270deg);
+            }
+        }
+        &--container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            &__button{
+                height: 4rem;
+                width: 15rem;
+        
+                display: flex;
+                align-items: center;
+                margin: 0 1rem 1rem 1rem;
+                border-radius: 1rem;
+        
+                border: none;
+    
+                &:hover{
+                    background-color: $color-gray;
+                    color: $color-light;
+                }
+                img{
+                    margin: 1rem;
+                    width: 2rem;
+                    height: 2rem;
+                }
             }
         }
     }
@@ -209,21 +212,23 @@ nav{
             height: 70%;
         }
     }
-    .filters{
-        width: 100%;
-        height: auto;
-        padding-left: 1rem;
-        display: flex;
-        justify-content: left;
-        align-items: start;
-        &--title{
+    .filterBar{
+        .filters{
+            width: 100%;
+            height: auto;
+            padding-left: 1rem;
             display: flex;
-            justify-content: start;
-            align-items: center;
-            margin-left: 1rem;
-        }
-        &--container{
-            padding: 0;
+            justify-content: left;
+            align-items: start;
+            &--title{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                margin-left: 1rem;
+            }
+            &--container{
+                padding: 0;
+            }
         }
     }
     .kits{

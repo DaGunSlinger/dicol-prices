@@ -11,9 +11,14 @@ repuestos.addEventListener('click', goToSpare)
 const cardsContainer = document.querySelector('.cards--container')
 const kits = document.querySelector('.kits')
 
+const filterBar = document.querySelector(".filterBar") 
+
 let filtroAnt = "";
 
 function goToDrones(filtro){
+    if(filterBar.classList.contains("inactive")){
+        filterBar.classList.toggle("inactive")
+    }
     if(!home.classList.contains("inactive")){
         home.classList.toggle("inactive")
         kits.classList.toggle("inactive")
@@ -85,6 +90,7 @@ function logoReturn(){
     if(!home.classList.contains("inactive")){
         return;
     }
+    filterBar.classList.toggle("inactive")
     if(!filtersContainer.classList.contains("inactive")){
         filterShowHide()
     }
@@ -103,14 +109,15 @@ function goToSpare(){
     home.classList.toggle("inactive")
 }
 
-const filterDiv = document.querySelector(".filters--title");
+const filterClick = document.querySelector(".filters--title");
+const filtersDiv = document.querySelector(".filtersDiv")
 const arowUp = document.querySelector(".arow_up")
 const arowDown = document.querySelector(".arow_down")
 const filtersContainer = document.querySelector(".filters--container");
-filterDiv.addEventListener("click", filterShowHide)
+filterClick.addEventListener("click", filterShowHide)
 
 function filterShowHide(){
-    filtersContainer.classList.toggle("inactive")
+    filtersDiv.classList.toggle("inactive")
     arowUp.classList.toggle("inactive")
     arowDown.classList.toggle("inactive")
 }

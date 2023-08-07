@@ -39,40 +39,44 @@
             </article>
         </section>
     </section>
-    <section class="filters">
-        <div class="filters--title">
-            <img src="./src/assets/icons/filter.png" alt="icono de filtro">
-            <h2>Filtros</h2>
-            <img src="./src/assets/icons/flechita.svg" alt="" class="arow_down">
-            <img src="./src/assets/icons/flechita.svg" alt="" class="arow_up inactive">
+    <nav class="filterBar inactive">
+        <div class="filters">
+            <div class="filters--title">
+                <img src="./src/assets/icons/filter.png" alt="icono de filtro">
+                <h2>Filtros</h2>
+                <img src="./src/assets/icons/flechita.svg" alt="" class="arow_down">
+                <img src="./src/assets/icons/flechita.svg" alt="" class="arow_up inactive">
+            </div>
+            <section class="filtersDiv inactive">
+                <div class="filters--container">
+                    <button class="filters--container__button btnDrone" data-category="drones">
+                            <img src="./src/assets/icons/drone.png" alt="icono de drone">
+                            <p>Drones</p>
+                    </button>
+                    <button class="filters--container__button btnBattery" data-category="baterias">
+                            <img src="./src/assets/icons/battery.png" alt="icono de baterías">
+                            <p>Baterías</p>
+                    </button>
+                    <button class="filters--container__button btnCharger" data-category="cargadores">
+                            <img src="./src/assets/icons/charger.png" alt="icono de cargadores">
+                            <p>Cargadores</p>
+                    </button>
+                    <button class="filters--container__button btnTank" data-category="tanques">
+                            <img src="./src/assets/icons/tank.png" alt="icono de tanques">
+                            <p>Tanques</p>
+                    </button>
+                    <button class="filters--container__button btnAcces" data-category="accesorios">
+                            <img src="./src/assets/icons/wifi.png" alt="icono de accesorios">
+                            <p>Accesorios</p>
+                    </button>
+                    <button class="filters--container__button btnOthers" data-category="otros">
+                            <img src="./src/assets/icons/otros.png" alt="icono de otros">
+                            <p>Otros</p>
+                    </button>
+                </div>
+            </section>
         </div>
-        <div class="filters--container inactive">
-            <button class="filters--container__button btnDrone" data-category="drones">
-                    <img src="./src/assets/icons/drone.png" alt="icono de drone">
-                    <p>Drones</p>
-            </button>
-            <button class="filters--container__button btnBattery" data-category="baterias">
-                    <img src="./src/assets/icons/battery.png" alt="icono de baterías">
-                    <p>Baterías</p>
-            </button>
-            <button class="filters--container__button btnCharger" data-category="cargadores">
-                    <img src="./src/assets/icons/charger.png" alt="icono de cargadores">
-                    <p>Cargadores</p>
-            </button>
-            <button class="filters--container__button btnTank" data-category="tanques">
-                    <img src="./src/assets/icons/tank.png" alt="icono de tanques">
-                    <p>Tanques</p>
-            </button>
-            <button class="filters--container__button btnAcces" data-category="accesorios">
-                    <img src="./src/assets/icons/wifi.png" alt="icono de accesorios">
-                    <p>Accesorios</p>
-            </button>
-            <button class="filters--container__button btnOthers" data-category="otros">
-                    <img src="./src/assets/icons/otros.png" alt="icono de otros">
-                    <p>Otros</p>
-            </button>
-        </div>
-    </section>
+    </nav>
     <section class="kits inactive">
         <article class="cards--container">
         </article>
