@@ -98,14 +98,14 @@ nav{
                 transform: rotate(270deg);
             }
         }
-        &--container{
+        &--containerKits, &--containerSpare{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             &__button{
                 height: 4rem;
-                width: 15rem;
+                width: 14rem;
         
                 display: flex;
                 align-items: center;
@@ -166,6 +166,7 @@ nav{
                 padding: 1rem;
                 border-radius: 0 0rem 1rem 1rem;
                 &__title{
+                    height: 4rem;
                     font-weight: bolder;
                 }
                 &__comment{

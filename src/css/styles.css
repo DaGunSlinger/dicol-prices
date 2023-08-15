@@ -148,7 +148,7 @@ nav .logo img {
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
 }
-.filterBar .filters--container {
+.filterBar .filters--containerKits, .filterBar .filters--containerSpare {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,9 +161,9 @@ nav .logo img {
       -ms-flex-align: center;
           align-items: center;
 }
-.filterBar .filters--container__button {
+.filterBar .filters--containerKits__button, .filterBar .filters--containerSpare__button {
   height: 4rem;
-  width: 15rem;
+  width: 14rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,11 +174,11 @@ nav .logo img {
   border-radius: 1rem;
   border: none;
 }
-.filterBar .filters--container__button:hover {
+.filterBar .filters--containerKits__button:hover, .filterBar .filters--containerSpare__button:hover {
   background-color: #5a5e5e;
   color: #f7f7f7;
 }
-.filterBar .filters--container__button img {
+.filterBar .filters--containerKits__button img, .filterBar .filters--containerSpare__button img {
   margin: 1rem;
   width: 2rem;
   height: 2rem;
@@ -235,6 +235,7 @@ nav .logo img {
   border-radius: 0 0rem 1rem 1rem;
 }
 .kits .cards--container .card--desc__title {
+  height: 4rem;
   font-weight: bolder;
 }
 .kits .cards--container .card--desc__comment {
